@@ -1,0 +1,303 @@
+/* General Design */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    line-height: 2.6;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #263238;
+}
+
+/* Navigation Bar */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.logo {
+    color: #009f87;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav a {
+    color: #263238;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #009f87;
+}
+
+/* Home Section */
+.home {
+    min-height: 520px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 8%;
+    background: linear-gradient(
+        110deg,
+        white 50%,
+        #009f87 50%
+    );
+    gap: 30px;
+}
+
+.home-text {
+    max-width: 500px;
+}
+
+.home-text h3 {
+    color: #009f87;
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.home-text h1 {
+    font-size: 45px;
+    margin-bottom: 12px;
+}
+
+.home-text h2 {
+    font-size: 20px;
+    margin-bottom: 18px;
+}
+
+.home-text p {
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #009f87;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #007c69;
+}
+
+/* Profile Picture */
+.home-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-image img {
+    width: 300px;
+    height: 350px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px;
+    border: 5px solid white;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* General Sections */
+section:not(.home) {
+    padding: 70px 8%;
+}
+
+.heading {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 35px;
+}
+
+.heading span {
+    color: #009f87;
+}
+
+/* About Section */
+.about {
+    background-color: white;
+}
+
+.about-box {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    line-height: 1.9;
+}
+
+.about-box p {
+    margin-bottom: 15px;
+}
+
+/* Cards */
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.card {
+    background-color: white;
+    padding: 30px 22px;
+    border-radius: 12px;
+    width: 280px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card h2 {
+    color: #009f87;
+    margin-bottom: 15px;
+    font-size: 21px;
+}
+
+.card p {
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+/* Portfolio */
+.portfolio {
+    background-color: #eaf8f5;
+}
+
+/* Contact */
+.contact {
+    background-color: white;
+    text-align: center;
+}
+
+.contact > p {
+    margin-bottom: 25px;
+}
+
+.social-links {
+    margin-bottom: 35px;
+}
+
+.social-links a {
+    display: inline-block;
+    background-color: #009f87;
+    color: white;
+    padding: 12px 20px;
+    margin: 5px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    background-color: #007c69;
+}
+
+/* Comment Form */
+.comment-box {
+    max-width: 500px;
+    margin: auto;
+    text-align: left;
+}
+
+.comment-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.comment-box input,
+.comment-box textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.comment-box textarea {
+    resize: vertical;
+}
+
+/* Footer */
+footer {
+    background-color: #263238;
+    color: white;
+    text-align: center;
+    padding: 22px;
+    font-size: 13px;
+}
+
+/* Mobile Phone Design */
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 18px;
+        padding: 20px 5%;
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    nav a {
+        margin: 0;
+        font-size: 13px;
+    }
+
+    .home {
+        flex-direction: column;
+        text-align: center;
+        background: linear-gradient(
+            180deg,
+            white 55%,
+            #009f87 55%
+        );
+        padding: 45px 6%;
+    }
+
+    .home-text h1 {
+        font-size: 35px;
+    }
+
+    .home-image img {
+        width: 230px;
+        height: 270px;
+    }
+
+    section:not(.home) {
+        padding: 50px 6%;
+    }
+
+    .heading {
+        font-size: 28px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 350px;
+    }
+}
